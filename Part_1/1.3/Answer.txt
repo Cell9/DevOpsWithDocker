@@ -1,0 +1,11 @@
+
+PS C:\WINDOWS\system32> docker image pull devopsdockeruh/simple-web-service:ubuntu
+
+PS C:\WINDOWS\system32> docker run -d -it --name secret 4e3362
+
+PS C:\WINDOWS\system32> docker start secret
+
+PS C:\WINDOWS\system32> docker exec -it secret tail -f ./text.log
+2022-05-20 15:30:31 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+

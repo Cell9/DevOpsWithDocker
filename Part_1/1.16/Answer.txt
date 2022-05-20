@@ -1,0 +1,10 @@
+
+docker pull devopsdockeruh/coursepage
+heroku login
+heroku container:login
+docker tag devopsdockeruh/coursepage registry.heroku.com/docker-course-fasfsa/web
+docker push registry.heroku.com/docker-course-fasfsa/web
+heroku container:release web --app docker-course-fasfsa
+
+Heroku link:
+https://docker-course-fasfsa.herokuapp.com/

@@ -1,0 +1,19 @@
+We make use of images from 1.12 and 1.13. 
+PS C:\...\Part_1\1.12> docker build .  -t frontend
+PS C:\...\Part_1\1.13> docker run -d --rm -p 5000:5000 frontend
+PS C:\...\Part_1\1.13> docker build .  -t backend
+PS C:\...\Part_1\1.13> docker run -d --rm -p 8080:8080 backend
+
+Commands for 1.14:
+
+Create 2nd frontend:
+PS C:\...\Part_1\1.14> docker build -f ./Dockerfile.front  -t frontend:v2 .
+
+Create 2nd backend:
+PS C:\...\Part_1\1.14> docker build -f ./Dockerfile.backend  -t backend:v2 .
+
+run them:
+
+docker run -d -p 5000:5000 frontend:v2
+
+docker run -d -p 8080:8080 backend:v2

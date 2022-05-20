@@ -1,0 +1,33 @@
+PS C:\WINDOWS\system32> docker pull devopsdockeruh/simple-web-service:ubuntu
+
+PS C:\WINDOWS\system32> docker pull devopsdockeruh/simple-web-service:alpine
+
+PS C:\WINDOWS\system32> docker images
+REPOSITORY                          TAG       IMAGE ID       CREATED         SIZE
+ubuntu                              latest    d2e4e1f51132   2 weeks ago     77.8MB
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   14 months ago   83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   14 months ago   15.7MB
+
+PS C:\WINDOWS\system32> docker  run -d --rm 4e
+b6c9f00f0adc0ba35ac5683180bd6b041c6f4bf6f2c7a194c9ad59cb396dd2f9
+PS C:\WINDOWS\system32> docker  run -d --rm fd
+9cf1060abac815bc335bd1d31d0605a039e4109878516aff98d505d8458414fc
+
+PS C:\WINDOWS\system32> docker ps
+CONTAINER ID   IMAGE     COMMAND                 CREATED              STATUS              PORTS     NAMES
+9cf1060abac8   fd        "/usr/src/app/server"   About a minute ago   Up About a minute             trusting_elion
+b6c9f00f0adc   4e        "/usr/src/app/server"   About a minute ago   Up About a minute             pensive_blackwell
+
+We do both containers:
+
+PS C:\WINDOWS\system32> docker exec -it b6c sh -c "tail -f ./text.log"
+2022-05-20 16:40:18 +0000 UTC
+2022-05-20 16:40:20 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+
+PS C:\WINDOWS\system32> docker exec -it 9cf sh -c "tail -f ./text.log"
+2022-05-20 16:41:40 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2022-05-20 16:41:50 +0000 UTC
+
+Both work.

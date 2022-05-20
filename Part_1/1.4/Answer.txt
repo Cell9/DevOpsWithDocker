@@ -1,0 +1,16 @@
+
+PS C:\WINDOWS\system32> docker run -d -it --rm --name curling ubuntu sh -c "echo 'Input website:'; read website; echo 'Searching..'; sleep 1; curl http://helsinki.fi;"
+
+PS C:\WINDOWS\system32> docker exec curling sh -c "apt-get update && apt-get install curl --yes"
+
+PS C:\WINDOWS\system32> docker attach curling
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.helsinki.fi/">here</a>.</p>
+</body></html>
+PS C:\WINDOWS\system32>

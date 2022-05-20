@@ -1,0 +1,5 @@
+PS C:\WINDOWS\system32> docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS                     PORTS     NAMES
+56d2cb2d6ce2   nginx     "/docker-entrypoint.…"   49 seconds ago   Exited (0) 8 seconds ago             eloquent_black
+ba5a47043f5a   nginx     "/docker-entrypoint.…"   51 seconds ago   Exited (0) 5 seconds ago             determined_volhard
+1bef3dbdb955   nginx     "/docker-entrypoint.…"   52 seconds ago   Up 51 seconds              80/tcp    tender_gauss

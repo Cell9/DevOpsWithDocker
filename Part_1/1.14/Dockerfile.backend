@@ -1,0 +1,5 @@
+FROM backend
+
+ENV REQUEST_ORIGIN=http://localhost:5000
+
+CMD ["./server"] 
