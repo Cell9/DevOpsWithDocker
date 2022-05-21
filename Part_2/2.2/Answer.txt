@@ -1,0 +1,6 @@
+PS C:\...\Part_2\2.2> docker compose up
+[+] Running 1/1
+ - Container 22_simple-web-service_1  Started                                                                      1.2s
+Attaching to simple-web-service_1
+simple-web-service_1  | [GIN] 2022/05/21 - 14:15:11 | 200 |      24.496µs |      172.19.0.1 | GET      "/"
+simple-web-service_1  | [GIN] 2022/05/21 - 14:15:11 | 200 |      15.048µs |      172.19.0.1 | GET      "/favicon.ico"

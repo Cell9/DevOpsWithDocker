@@ -1,0 +1,1 @@
+PS C:\...\Part_2\2.5\scaling-exercise> docker-compose up --scale compute=3
